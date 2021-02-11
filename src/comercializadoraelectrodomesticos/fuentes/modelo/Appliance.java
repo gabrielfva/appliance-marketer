@@ -10,9 +10,32 @@ package comercializadoraelectrodomesticos.fuentes.modelo;
  * @author Gabriel Vargas
  */
 public class Appliance {
-    protected int idAppliance;
-    protected String nameAppliance;
     protected char consumptionAppliance;
-    protected int priceAppliance;
     protected int originAppliance;
+
+    public Appliance(char consumptionAppliance, int originAppliance) {
+        this.consumptionAppliance = consumptionAppliance;
+        this.originAppliance = originAppliance;
+    }
+
+    public Appliance() {
+    }
+
+    public char getConsumptionAppliance() {
+        return consumptionAppliance;
+    }
+
+    public void setConsumptionAppliance(char consumptionAppliance) {
+        this.consumptionAppliance = consumptionAppliance;
+    }
+
+    public int getOriginAppliance() {
+        return originAppliance;
+    }
+
+    public void setOriginAppliance(int originAppliance) {
+        this.originAppliance = originAppliance;
+    }
+    
+    
 }
