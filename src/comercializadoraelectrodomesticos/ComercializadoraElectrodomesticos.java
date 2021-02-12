@@ -24,8 +24,6 @@ public class ComercializadoraElectrodomesticos {
     public static void main(String[] args) {
         // TODO code application logic here
         int option;
-        int origin;
-        int consumption;
         int consumptionValidate;
         int originValidate;
         int optionMenu;
@@ -60,13 +58,10 @@ public class ComercializadoraElectrodomesticos {
                                 System.out.println("-----Vender Electrodoméstico-----\n");
                                 Appliance appliance = new Appliance();
                                 appliance.setTypeAppliance("Electrodoméstico");
-                                // se valida que el consumo sea tipo a, b o c
                                 consumptionValidate = consumptionValidate();  
                                 appliance.setConsumptionAppliance(consumptionValidate);
-                                 // se valida que el origen sea nacional, importado
                                 originValidate = originValidate();
                                 appliance.setOriginAppliance(originValidate);
-                                // Se realiza la venta
                                 tosell.toSell(appliance);                                                               
                                 break; 
                                 
@@ -74,20 +69,16 @@ public class ComercializadoraElectrodomesticos {
                                 System.out.println("-----Vender Televisor-----\n");
                                 TelevisionSet tv = new TelevisionSet();
                                 tv.setTypeAppliance("Televisor");
-                                // se valida que el consumo sea tipo a, b o c
                                 consumptionValidate = consumptionValidate();  
                                 tv.setConsumptionAppliance(consumptionValidate);
-                                 // se valida que el origen sea nacional, importado
                                 originValidate = originValidate();
-                                 tv.setOriginAppliance(originValidate);
+                                tv.setOriginAppliance(originValidate);
                                  
                                 System.out.println("1. Tamaño en pulgadas: ");                                
                                 int sizeTv = capture.nextInt();  
                                 tv.setSize(sizeTv);                                                                                                       
-                                // se valida si el tv tiene tdt o no
                                 int tdt = tdtValidate();                                                                                                                                                                                                                            
                                 tv.setTdtTuner(tdt);                                
-                                // Se realiza la venta
                                 tosell.toSell(tv);                                
                                 break;  
                                 
@@ -95,17 +86,13 @@ public class ComercializadoraElectrodomesticos {
                                 System.out.println("-----Vender Nevera-----\n");
                                 Fridge fridge = new Fridge();                          
                                 fridge.setTypeAppliance("Nevera");
-                                // se valida que el consumo sea tipo a, b o c
                                 consumptionValidate = consumptionValidate();  
                                 fridge.setConsumptionAppliance(consumptionValidate);
-                                 // se valida que el origen sea nacional, importado
                                 originValidate = originValidate();
                                 fridge.setOriginAppliance(originValidate);
-                                 
                                 System.out.println("1. Capacidad: ");
                                 int capacity = capture.nextInt();                                 
-                                fridge.setCapacity(capacity);
-                                // Se realiza la venta                        
+                                fridge.setCapacity(capacity);    
                                 tosell.toSell(fridge);
                                 break; 
                         }                                       

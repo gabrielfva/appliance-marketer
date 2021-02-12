@@ -58,10 +58,7 @@ public class ToSell extends Exception {
         fridgePrice = fridgePrice + originPrice(fridge.getOriginAppliance());
         
         if(fridge.getCapacity() > 120){
-            int extraCapacity = fridge.getCapacity() - 120;
-            extraCapacity = (extraCapacity / 10);
-            double porcent = (extraCapacity * 0.05) * fridgePrice ;
-            fridgePrice = fridgePrice + porcent;
+            fridgePrice = fridgePrice + ((((fridge.getCapacity() - 120) / 10) * 0.05) * fridgePrice) ;
         }
         
         Sale venta = new Sale(fridge, fridgePrice);
