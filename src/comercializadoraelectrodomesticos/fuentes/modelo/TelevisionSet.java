@@ -9,17 +9,18 @@ package comercializadoraelectrodomesticos.fuentes.modelo;
  *
  * @author Gabriel Vargas
  */
-public class TelevisionSet extends Appliance{
+public class TelevisionSet extends Appliance {
+
     private int size;
     private int tdtTuner;
 
-    public TelevisionSet(char consumptionAppliance, int originAppliance) {
-        super(consumptionAppliance, originAppliance);
+    public TelevisionSet(String typeAppliance, char consumptionAppliance, int originAppliance) {
+        super(typeAppliance, consumptionAppliance, originAppliance);
     }
 
     public TelevisionSet() {
     }
-    
+
     public int getSize() {
         return size;
     }
@@ -35,5 +36,5 @@ public class TelevisionSet extends Appliance{
     public void setTdtTuner(int tdtTuner) {
         this.tdtTuner = tdtTuner;
     }
-    
+
 }

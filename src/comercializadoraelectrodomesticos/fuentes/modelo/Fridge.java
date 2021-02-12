@@ -12,8 +12,8 @@ package comercializadoraelectrodomesticos.fuentes.modelo;
 public class Fridge extends Appliance{
     private int capacity;
 
-    public Fridge(char consumptionAppliance, int originAppliance) {
-        super(consumptionAppliance, originAppliance);
+    public Fridge(String typeAppliance,char consumptionAppliance, int originAppliance) {
+        super(typeAppliance, consumptionAppliance, originAppliance);
     }
 
     public Fridge() {
